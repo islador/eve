@@ -10,6 +10,9 @@ module Eve
         def fac_war_top_stats; request(:eve, :fac_war_top_stats); end
         def skill_tree; request(:eve, :skill_tree); end
 
+        def character_info(id)
+          request(:eve, :character_info, :characterID => id)
+        end
         # Returns a list of transaction types used in the Journal Entries
         # Response Example:
         #   result = api.eve.ref_types
